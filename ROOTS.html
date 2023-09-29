@@ -17,6 +17,8 @@
 
         if (d < 0) return []; // нет корней
 
+        if (a == 0) return [Math.abs(c / b)];
+
         if (d == 0) return [-b / (2 * a)]; // один корень
 
         const x1 = (-b + Math.sqrt(d)) / (2 * a);
@@ -62,6 +64,7 @@
         {
           console.log("тест 0,5,-10 -> один корень 2");
           const roots = squareRoots(0, 5, -10);
+          console.log(roots);
           console.log(
             roots.length == 1 && roots[0] == 2 ? "пройден" : "НЕ ПРОЙДЕН!"
           );
