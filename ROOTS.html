@@ -13,11 +13,10 @@
       // находим корни квадратного уравнения
       // возвращает массив корней
       function squareRoots(a, b, c) {
+        if (a == 0) return [-c / b];
         const d = b * b - 4 * a * c; // дискриминант
 
         if (d < 0) return []; // нет корней
-
-        if (a == 0) return [Math.abs(c / b)];
 
         if (d == 0) return [-b / (2 * a)]; // один корень
 
